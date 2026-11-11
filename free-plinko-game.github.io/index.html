@@ -27,10 +27,17 @@
 		
 		<link href="./_app/immutable/assets/0.KJa12Wki.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/2.BtJ1PAbo.css" rel="stylesheet">
+		
+		<style>
+			/* Hides the top navigation bar and balance header inside the Svelte app */
+			header, nav, [class*="navbar"], [class*="header"] {
+				display: none !important;
+			}
+		</style>
 	</head>
 	<body data-sveltekit-preload-data="hover" class="bg-black m-0 p-0 overflow-hidden">
 		<div style="display: contents">
-			<main class="w-screen h-screen flex items-center justify-center">
+			<main class="w-screen h-screen flex items-center justify-center p-0 m-0">
 				<!-- Plinko Game Container Only -->
 				<div class="w-full h-full">
 					<div class="flex flex-col-reverse h-full w-full overflow-hidden lg:flex-row">
