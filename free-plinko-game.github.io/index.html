@@ -23,30 +23,30 @@
 		<link href="./_app/immutable/chunks/DIUuKyVX.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/BRcnQGk6.js" rel="modulepreload">
 
-		<title>Free Plinko Game</title>
+		<title>Plinko</title>
 		
 		<link href="./_app/immutable/assets/0.KJa12Wki.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/2.BtJ1PAbo.css" rel="stylesheet">
 	</head>
-	<body data-sveltekit-preload-data="hover" class="bg-black">
-		<div style="display: contents">  
-			<main class="flex min-h-dvh items-center justify-center p-5">
+	<body data-sveltekit-preload-data="hover" class="bg-black m-0 p-0 overflow-hidden">
+		<div style="display: contents">
+			<main class="w-screen h-screen flex items-center justify-center">
 				<!-- Plinko Game Container Only -->
-				<div class="w-full max-w-7xl drop-shadow-xl">
-					<div class="flex flex-col-reverse overflow-hidden rounded-lg lg:w-full lg:flex-row">
+				<div class="w-full h-full">
+					<div class="flex flex-col-reverse h-full w-full overflow-hidden lg:flex-row">
 						<!-- Controls Sidebar -->
 						<div class="w-full lg:w-80 bg-zinc-900 p-4" data-svelte-h="svelte-cj77mh">
-							<div class="animate-pulse h-96 bg-zinc-800 rounded"></div>
-						</div> 
+							<div class="animate-pulse h-full bg-zinc-800 rounded"></div>
+						</div>
 						<!-- Game Canvas Area -->
-						<div class="flex-1">
-							<div class="bg-zinc-900 h-[600px] flex items-center justify-center" data-svelte-h="svelte-14hzha1">
+						<div class="flex-1 h-full">
+							<div class="bg-zinc-900 h-full flex items-center justify-center" data-svelte-h="svelte-14hzha1">
 								<div class="text-white">Loading Plinko...</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</main> 
+			</main>
 			
 			<script>
 				{
