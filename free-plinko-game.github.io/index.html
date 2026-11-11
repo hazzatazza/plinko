@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full bg-black">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
@@ -29,25 +29,34 @@
 		<link href="./_app/immutable/assets/2.BtJ1PAbo.css" rel="stylesheet">
 		
 		<style>
-			/* Hides the top navigation bar and balance header inside the Svelte app */
-			header, nav, [class*="navbar"], [class*="header"] {
+			/* Hide navigation bars, headers, and any footer/content sections outside the main game */
+			header, nav, footer, [class*="navbar"], [class*="header"], section:not(:has(.flex-col-reverse)) {
 				display: none !important;
+			}
+			/* Force full viewport coverage and prevent any scrolling */
+			html, body {
+				margin: 0;
+				padding: 0;
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden !important;
+				background-color: black;
 			}
 		</style>
 	</head>
-	<body data-sveltekit-preload-data="hover" class="bg-black m-0 p-0 overflow-hidden">
-		<div style="display: contents">
-			<main class="w-screen h-screen flex items-center justify-center p-0 m-0">
+	<body class="h-full bg-black m-0 p-0 overflow-hidden" data-sveltekit-preload-data="hover">
+		<div style="display: contents; width: 100%; height: 100%;">
+			<main class="w-screen h-screen flex items-center justify-center p-0 m-0 overflow-hidden">
 				<!-- Plinko Game Container Only -->
-				<div class="w-full h-full">
+				<div class="w-full h-full max-w-none max-h-none flex items-center justify-center">
 					<div class="flex flex-col-reverse h-full w-full overflow-hidden lg:flex-row">
 						<!-- Controls Sidebar -->
-						<div class="w-full lg:w-80 bg-zinc-900 p-4" data-svelte-h="svelte-cj77mh">
+						<div class="w-full lg:w-80 bg-zinc-900 p-4 shrink-0" data-svelte-h="svelte-cj77mh">
 							<div class="animate-pulse h-full bg-zinc-800 rounded"></div>
 						</div>
 						<!-- Game Canvas Area -->
-						<div class="flex-1 h-full">
-							<div class="bg-zinc-900 h-full flex items-center justify-center" data-svelte-h="svelte-14hzha1">
+						<div class="flex-1 h-full overflow-hidden flex items-center justify-center">
+							<div class="bg-zinc-900 w-full h-full flex items-center justify-center" data-svelte-h="svelte-14hzha1">
 								<div class="text-white">Loading Plinko...</div>
 							</div>
 						</div>
